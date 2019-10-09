@@ -1,8 +1,35 @@
-import Vue from 'vue'
-import App from './App.vue'
+import "@babel/polyfill";
+import "mutationobserver-shim";
+import Vue from "vue";
+import "./plugins/bootstrap-vue";
+import App from "./App.vue";
+// import { router } from "./router/router";
+import VueRouter from "vue-router";
+import HomePage from "./components/Pages/Homepage";
+import NewsList from "./components/Pages/NewsList";
+import NewsItem from "./components/Pages/NewsItem";
+import Contacts from "./components/Pages/Contacts";
 
-Vue.config.productionTip = false
+const routes = [
+  { path: "/", component: HomePage },
+  { path: "/contacts", component: Contacts },
+  { path: "/news", component: NewsList },
+  { path: "/news/:id", component: NewsItem }
+  //   { path: "/contacts", component: Foo }
+];
+
+export const router = new VueRouter({
+  routes
+});
+///CSSSSSS/////////////////////
+// import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap-vue/dist/bootstrap-vue.css";
+
+Vue.use(VueRouter);
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: h => h(App)
+}).$mount("#app");
