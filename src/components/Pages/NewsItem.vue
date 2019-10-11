@@ -42,9 +42,21 @@
                 <div class="article-share">
                   <p>Поделиться:</p>
                   <div class="share-buttons">
-                    <div class="share-btn"></div>
-                    <div class="share-btn"></div>
-                    <div class="share-btn"></div>
+                    <a href="#">
+                      <div class="share-btn">
+                        <img src="../../assets/fb-grey.svg" alt />
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="share-btn">
+                        <img src="../../assets/tg-grey.svg" alt />
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="share-btn">
+                        <img src="../../assets/insta-grey.svg" alt />
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -107,6 +119,7 @@
 
 .post {
   padding-top: 32px;
+  padding-bottom: 64px;
 }
 
 .top-article-header {

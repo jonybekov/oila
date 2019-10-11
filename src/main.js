@@ -8,11 +8,15 @@ import VueRouter from "vue-router";
 import HomePage from "./components/Pages/Homepage";
 import NewsList from "./components/Pages/NewsList";
 import NewsItem from "./components/Pages/NewsItem";
+import Gallery from "./components/Pages/Gallery";
 import Contacts from "./components/Pages/Contacts";
+import Article from "./components/Pages/Article";
 
 const routes = [
   { path: "/", component: HomePage },
   { path: "/contacts", component: Contacts },
+  { path: "/gallery", component: Gallery },
+  { path: "/article", component: Article },
   { path: "/news", component: NewsList },
   { path: "/news/:id", component: NewsItem }
   //   { path: "/contacts", component: Foo }
